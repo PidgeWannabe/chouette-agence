@@ -100,11 +100,11 @@ a:hover {
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, 1);
 }
 
 .d-bloc button:hover {
-    color: rgba(255, 255, 255, .9);
+    color: rgba(255, 255, 255, 1);
 }
 
 .d-bloc .icon-round,
@@ -113,6 +113,10 @@ a:hover {
 .d-bloc .icon-semi-rounded-a,
 .d-bloc .icon-semi-rounded-b {
     border-color: rgba(255, 255, 255, .9);
+}
+
+.col-sm-4 ul li a  {
+    color: #FFFFFF !important;
 }
 
 .d-bloc .divider-h span {
@@ -133,7 +137,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 1);
 }
 
 .d-bloc .a-btn:hover,
@@ -231,7 +235,7 @@ a:hover {
 .l-bloc h5 a,
 .l-bloc h6 a,
 .l-bloc p a {
-    color: rgba(0, 0, 0, .6);
+    color: #FFFFFF;
 }
 
 .d-bloc .panel .a-btn:hover,
@@ -333,8 +337,46 @@ a:hover {
 }
 
 .nav > li a:hover,
-.nav > li a:focus {
-    background: transparent;
+.nav > li a:focus,
+button:hover,
+button:focus,
+nav a:hover,
+nav a:focus,
+a.btn:hover,
+a.btn:focus,
+li a:focus,
+li a:hover,
+h3 a:hover,
+h3 a:focus,
+img.portfolio-thumb:hover,
+img.portfolio-thumb:focus,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus
+/* a:hover,
+a:focus  */
+{
+    text-decoration: underline;
+    outline: 0;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8) !important;
+}          
+
+a.btn:hover,
+a.btn:focus,
+button:hover,
+button:focus
+{
+    background: #4A1907;
+}
+
+a.social:hover,
+a.social:focus,
+.img-shadow:hover,
+.img-shadow:focus
+ {
+    outline: 0;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.8);
 }
 
 .navbar-toggle {
@@ -445,8 +487,13 @@ nav .caret {
     margin-bottom: 40px;
 }
 
-.btn {
+button {
     margin: 0 5px 5px 0;
+    
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .btn.pull-right {
@@ -506,7 +553,7 @@ button {
 }
 
 .form-control {
-    border-color: rgba(0, 0, 0, .1);
+    border-color: rgba(0, 0, 0, 0.7);
     box-shadow: none;
 }
 
@@ -639,19 +686,19 @@ a[data-lightbox]:hover img {
     background: none;
 }
 
-h1,
-h2,
+
+
 h3,
 h4,
 h5,
 h6,
-p,
 label,
 .btn,
 a {
     font-family: "helvetica";
     font-weight: 400;
     color: #575757!important;
+    text-align: justify;
 }
 
 .container {
@@ -676,8 +723,8 @@ a {
     margin: auto auto auto auto;
 }
 
-p {
-    font-size: 11px;
+p, a, label, h3 {
+    font-size: 18px;
 }
 
 .tight-width-whitespace {
@@ -705,8 +752,15 @@ p {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.4em;
+}
+
+blockquote, blockquote p {
+    font-family: "helvetica";
+    font-weight: 400;
+    color: #575757!important;
+    font-size: 24px;
 }
 
 h3 {
@@ -722,12 +776,9 @@ h3 {
     box-shadow: 0px 0px 0px #000000;
 }
 
-h1 {
-    color: #333333!important;
-}
 
 h4 {
-    color: #333333!important;
+    color: #FFFFFF!important;
 }
 
 .icons {
@@ -770,23 +821,33 @@ h4 {
     background-color: #364577;
 }
 
-.bgc-atomic-tangerine {
+
+/* .bgc-atomic-tangerine {
     background-color: #F3976C;
+} */
+
+.bgc-atomic-tangerine {
+    background-color: #BF450D;
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #E8E8E8!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #BF450D;
     color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
+/* .btn-atomic-tangerine {
+    background: #F3976C;
     color: #FFFFFF!important;
-}
+} */
+
+        /* .btn-atomic-tangerine:hover {
+            background: #c27956!important;
+            color: #FFFFFF!important;
+        } */
 
 .ltc-white {
     color: #FFFFFF!important;
@@ -797,12 +858,20 @@ h4 {
 }
 
 .ltc-atomic-tangerine {
-    color: #F3976C!important;
+    color: #BF450D!important;
 }
 
+/* .ltc-atomic-tangerine {
+    color: #F3976C!important;
+} */
+
 .ltc-atomic-tangerine:hover {
-    color: #c27956!important;
+    color: #BF450D!important;
 }
+
+/* .ltc-atomic-tangerine:hover {
+    color: #c27956!important;
+} */
 
 .icon-dark-slate-blue {
     color: #364577!important;
@@ -822,7 +891,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -1032,6 +1101,15 @@ h4 {
     .bloc {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    p, a, h4 {
+        font-size: 28px;
+    }
+
+    h1, h2, h3, blockquote {
+        font-size: 30px;
+        text-align: justify;
     }
 }
 
